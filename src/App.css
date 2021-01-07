@@ -1,38 +1,109 @@
+/* * {
+  margin: 0;
+  padding: 0;
+} */
 .App {
-  text-align: center;
+  position: relative;
+  background: #e9e8e6;
+  height: 100vh;
+  width: 100vw;
+  /* height: 100%;
+  width: 100%; */
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: #fcfdfb;
+  width: 400px;
+  min-height: 250px;
+  max-height: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.col {
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 20px 0px;
+  border-bottom: 1px dashed #ccc;
+  max-width: 350px;
+  margin: 0 auto;
 }
-
-.App-link {
-  color: #61dafb;
+.col-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0px;
+  max-width: 350px;
+  margin: 0 auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+input {
+  width: 20px;
+  text-align: center;
+  border-radius: 0px;
+  border: 1px solid #bbbab8;
+}
+label {
+  width: 104px;
+}
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+li {
+  list-style: none;
+}
+span.value {
+  max-width: 60px;
+  text-align: right;
+  color: #ea5d17;
+  font-weight: bold;
+}
+.col-footer span {
+  width: 104px;
+  color: #7d7a7a;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: right;
+  cursor: pointer;
+}
+.col-footer span.total {
+  color: #747373;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: left;
+}
+.col-footer button {
+  position: relative;
+  height: 35px;
+  width: 120px;
+  background: #6fbbe1;
+  border: 0px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+button:focus {
+  outline: none;
+}
+.col-footer button:after {
+  content: ' \005E';
+  position: absolute;
+  bottom: 6px;
+  right: 13px;
+  font-size: 20px;
+  transform: rotate(90deg);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
 }
