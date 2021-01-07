@@ -5,7 +5,7 @@ const Cart = () => {
 
     const elements =  [
         {name: "soda", label: "Mountain Dew", id: 1, price: 1.80},
-        {name: "beer", label: "Desperados", id: 2, price: 2.58},
+        {name: "beer", label: "Desperados", id: 2, price: 2.5833},
         {name: "alcohol", label: "Jack Daniels", id: 3, price: 3.35}
     ];
     const defaultValues = {soda: 0, beer: 0, alcohol: 0};
@@ -19,10 +19,10 @@ const Cart = () => {
         return (qty * price);
     }
 
-    const total = () => { // mapping through the array of elements
+    const total = () => {
         return elements
-            .map(element => itemTotal(values[element.name], element.price))   // [50, 30, 20]
-            .reduce((acc,v) => acc + v, 0) // 
+            .map(element => itemTotal(values[element.name], element.price))
+            .reduce((acc,v) => acc + v, 0)
             .toFixed(2);
     }
 
