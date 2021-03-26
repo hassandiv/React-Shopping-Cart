@@ -13,6 +13,7 @@ const Cart = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
+        
     }
 
     const itemTotal = (qty, price) => {
